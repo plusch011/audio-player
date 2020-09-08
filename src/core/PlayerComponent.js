@@ -1,6 +1,6 @@
 import {DOMListener} from '@core/DomListener';
 
-export class ExcelComponent extends DOMListener {
+export class PlayerComponent extends DOMListener {
   constructor($root, options = {}) {
     super($root, options.listeners);
 

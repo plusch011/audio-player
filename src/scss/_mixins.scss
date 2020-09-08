@@ -1,22 +1,12 @@
-@mixin button($color: green) {
-  height: 24px;
-  min-width: 24px;
-  padding: 3px;
-  text-align: center;
+@mixin button() {
   position: relative;
-  display: inline-block;
-  color: rgba(0, 0, 0, .7);
-
-  & > i {
-    font-size: 18px;
-  }
-
+  transition: color 0.1s, background 0.1s, box-shadow 0.1s;
+  user-select: none;
   &:active, &.active {
-    color: $color;
+    color: white;
   }
 
   &:hover {
-    background: rgba(0, 0, 0, .1);
     cursor: pointer;
   }
 }
@@ -25,4 +15,11 @@
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+@mixin flex($direction: row, $main-align: center, $second-align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $main-align;
+  align-items: $second-align;
 }

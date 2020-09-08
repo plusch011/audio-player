@@ -1,13 +1,13 @@
 import {$} from '@core/dom';
 
-export class Excel {
+export class Player {
   constructor(selector, options = {}) {
     this.$el = $(selector);
     this.components = options.components || [];
   }
 
   getRoot() {
-    const $root = $.create('div', 'excel');
+    const $root = $.create('div', 'player');
 
     this.components = this.components.map(Component => {
       const $el = $.create('div', Component.className);

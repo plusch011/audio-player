@@ -1,0 +1,154 @@
+@import "mixins";
+
+.player__controls {
+  @include flex(row, start);
+  width: 244px;
+  height: 83px;
+  padding-left: 15px;
+  margin-right: 75px;
+
+  background: linear-gradient(135.37deg, rgba(126, 1, 255, 0.4) 4.29%, rgba(255, 255, 255, 0.4) 95.6%), #EBECF0;
+  background-blend-mode: soft-light, normal;
+  border: 0.805281px solid rgba(255, 255, 255, 0.4);
+  box-sizing: border-box;
+  box-shadow: -2px -2px 5px #FAFBFF, 2px 2px 5px #A6ABBD;
+  border-radius: 32.2112px;
+
+  .hello-message {
+    width: 188px;
+    height: 34px;
+
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+
+    color: #000000;
+  }
+
+  .small-play-button {
+    @include flex();
+    @include button();
+    width: 30px;
+    height: 30px;
+    color: #22222A;
+
+    background: linear-gradient(0deg, #EBEBEE, #EBEBEE), #6D05D8;
+    box-shadow: -0.6px -0.6px 1.2px #FFFFFF, 0.6px 0.6px 1.2px #A6ABBD;
+    border-radius: 21.4953px;
+
+    &:hover {
+      color: #22222ADD;
+      box-shadow: -0.6px -0.6px 1.2px #A6ABBD, 0.6px 0.6px 1.2px #FFFFFF;
+    }
+
+    &:active {
+      color: #22222ABB;
+      box-shadow: -0.6px -0.6px 1.2px #A6ABBD, 0.6px 0.6px 1.2px #FFFFFF,
+                  inset -0.6px -0.6px 1.2px #FFFFFF, inset 0.6px 0.6px 1.2px #A6ABBD;
+    }
+  }
+
+  .bar {
+    @include flex(column);
+    margin-left: 5px;
+    .top-menu {
+      @include flex(row, space-between);
+      width: 100%;
+
+      .track-title {
+        font-size: 9px;
+        line-height: 11px;
+
+        color: #000000;
+      }
+
+      .volume {
+        font-size: 12px;
+        transition: opacity 0.1s;
+
+        &:hover {
+          opacity: 0.6;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .timeline {
+      width: 147px;
+
+      background: linear-gradient(135.37deg, rgba(0, 0, 0, 0.4) 4.29%, rgba(255, 255, 255, 0.4) 95.6%), #FDFDFD;
+      background-blend-mode: soft-light, normal;
+      box-sizing: border-box;
+      box-shadow: -1px -1px 2px #FAFBFF, 1px 1px 2px #A6ABBD;
+      border-radius: 40px;
+      margin: 5px 0;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      .progress {
+        width: 8px;
+        height: 8px;
+
+        background: linear-gradient(0deg, #6403D5, #6403D5), #FDFDFD;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        box-sizing: border-box;
+        box-shadow: -1px -1px 2px #FAFBFF, 1px 1px 2px #A6ABBD;
+        border-radius: 40px;
+      }
+    }
+
+    .time {
+      @include flex(row, space-between);
+      width: 100%;
+
+      div {
+        color: #000000;
+
+        opacity: 0.5;
+
+        &:hover {
+          opacity: 0.6;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .big-play-button {
+    @include flex();
+    position: absolute;
+    right: 0px;
+
+    width: 115px;
+    height: 115px;
+    transition: box-shadow 0.4s, background 0.4s;
+
+    background: linear-gradient(135.37deg, rgba(0, 0, 0, 0.4) 4.29%, rgba(255, 255, 255, 0.4) 95.6%), #6D05D8;
+    background-blend-mode: soft-light, normal;
+    box-shadow: -2px -2px 5px #FFFFFF, 2px 2px 5px #A6ABBD;
+    border-radius: 107.477px;
+    color: #FFFFFF;
+
+    .text {
+      font-size: 16px;
+      line-height: 19px;
+      text-align: center;
+    }
+
+    .big-icon {
+      font-size: 90px;
+
+    }
+
+    &:hover {
+      box-shadow: -2px -2px 5px #FFFFFF, 2px 2px 5px #b4b6bd,
+      inset 0px 0px 8px #FFFFFF88;
+      cursor: pointer;
+    }
+  }
+
+}
+
+

@@ -1,9 +1,14 @@
 @import "~normalize.css";
-@import "header";
-@import "toolbar";
-@import "formula";
-@import "table";
-@import "dashboard";
+@import "variables";
+@import "controls";
+@import "player-button";
+
+@font-face {
+  font-family: Proxima Nova;
+  src: url(../fonts/ProximaNova-Regular.otf);
+  format: truetype;
+}
+
 
 * {
   margin: 0;
@@ -14,12 +19,17 @@
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vw;
 }
 
-.excel {
+.player {
+  font-family: Proxima Nova;
+  font-size: 12px;
   position: relative;
-  color: #888;
-  height: 100%;
-  max-width: 100%;
-  font-size: .8rem;
+
+  display: flex;
+  align-items: center;
 }

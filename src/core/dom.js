@@ -5,6 +5,19 @@ export class Dom {
       : this.$el = selector;
   }
 
+  closest(selector) {
+    const el = this.$el.closest(selector)
+    return el ? $(el) : null;
+  }
+
+  get data() {
+    return this.$el.dataset;
+  }
+
+  getCoords() {
+    return this.$el.getBoundingClientRect();
+  }
+
   html(template) {
     if (typeof template === 'string') {
       this.$el.innerHTML = template;
@@ -31,6 +44,16 @@ export class Dom {
   append(node) {
     this.$el.append(node instanceof Dom ? node.$el : node);
     return this;
+  }
+
+  findAll(selector) {
+    return this.$el.querySelectorAll(selector);
+  }
+
+  find(selector) {
+    const el = this.$el.querySelector(selector);
+
+    return el ? $(el) : null;
   }
 }
 
